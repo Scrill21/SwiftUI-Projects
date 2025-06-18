@@ -1,5 +1,5 @@
 //
-//  BackgroundAndFrameModifierView.swift
+//  BackgroundAndFrameModifier.swift
 //  ViewsAndModifiers
 //
 //  Created by anthony byrd on 6/17/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackgroundAndFrameModifierView: View {
+struct BackgroundAndFrameModifier: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,5 +21,5 @@ struct BackgroundAndFrameModifierView: View {
 }
 
 #Preview {
-    BackgroundAndFrameModifierView()
+    BackgroundAndFrameModifier()
 }
