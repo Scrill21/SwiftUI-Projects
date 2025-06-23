@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkingWithStringAPI: View {
     var body: some View {
         Button {
-            separatingStrings()
+            spellCheckingStrings()
         } label: {
             Text("Tap to run function")
                 .foregroundStyle(.white)
