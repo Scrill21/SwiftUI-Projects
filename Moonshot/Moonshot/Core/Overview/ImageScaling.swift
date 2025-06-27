@@ -7,12 +7,32 @@
 
 import SwiftUI
 
-struct ImageScaling: View {
+struct TestImageScalingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        DynamicScaling()
+    }
+}
+
+fileprivate struct ImageScaling: View {
+    var body: some View {
+        Image(.itadori)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 300, height: 300)
+    }
+}
+
+fileprivate struct DynamicScaling: View {
+    var body: some View {
+        Image(.itadori)
+            .resizable()
+            .scaledToFit()
+            .containerRelativeFrame(.horizontal) { size, axis in
+                size * 0.8
+            }
     }
 }
 
 #Preview {
-    ImageScaling()
+    TestImageScalingView()
 }
