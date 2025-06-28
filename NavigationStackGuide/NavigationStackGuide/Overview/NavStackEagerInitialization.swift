@@ -7,7 +7,7 @@
 
 /*:
  ### Eager Initialization Behavior in `NavigationStack`
- - When a view is placed inside a NavigationStack, its initializer is invoked as soon as the stack is rendered, even if the view hasn’t been navigated to. This can lead to unexpected side effects or performance issues due to premature view construction.
+ - When a view is placed inside a `NavigationStack`, its initializer is invoked as soon as the stack is rendered, even if the view hasn’t been navigated to. This can lead to unexpected side effects or performance issues due to premature view construction.
  */
 
 import SwiftUI
@@ -24,7 +24,7 @@ struct NavStackEagerInitialization: View {
     }
 }
 
-struct DetailView: View {
+fileprivate struct DetailView: View {
     let number: Int
     
     var body: some View {

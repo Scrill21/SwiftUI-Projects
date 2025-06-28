@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationStackGuideApp: App {
     var body: some Scene {
         WindowGroup {
-            NavStackEagerInitialization()
+            CustomizingToolbarButtons()
         }
     }
 }
