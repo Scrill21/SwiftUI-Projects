@@ -5,11 +5,33 @@
 //  Created by anthony byrd on 7/4/25.
 //
 
+import SwiftData
 import SwiftUI
 
 struct SwiftDataExample: View {
+    @Environment(\.modelContext) var modelContext
+    @Query var students: [Student]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(students) { student in
+                Text(student.name)
+            }
+            .navigationTitle("Classroom")
+            .toolbar {
+                Button("Add") {
+                    let firstName = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+                    let lastName = ["Granger", "Lovegood", "Potter", "Weasley", "Ron"]
+                    
+                    let chosenFirstName = firstName.randomElement()!
+                    let chosenLastName = lastName.randomElement()!
+                    
+                    let student = Student(id: UUID(), name: "\(chosenFirstName) \(chosenLastName)")
+                    
+                    modelContext.insert(student)
+                }
+            }
+        }
     }
 }
 
