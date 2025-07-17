@@ -24,7 +24,7 @@ import SwiftUI
 struct BookwormApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BookwormView()
         }
         .modelContainer(for: Book.self)
     }
