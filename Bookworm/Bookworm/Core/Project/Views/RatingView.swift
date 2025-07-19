@@ -25,8 +25,6 @@ struct RatingView: View {
                 Text(label)
             }
             
-            Spacer()
-            
             ForEach(1..<maximumRating + 1, id: \.self) { number in
                 Button {
                     rating = number
