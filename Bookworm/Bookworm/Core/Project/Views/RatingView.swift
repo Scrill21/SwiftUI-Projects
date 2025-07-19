@@ -36,7 +36,7 @@ struct RatingView: View {
                 }
             }
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.plain) // This line enables each button to be individually selectable in the view.
     }
 }
 
