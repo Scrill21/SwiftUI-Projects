@@ -13,6 +13,8 @@
  - Holds your data model: Defines the structure of your persistent data using SwiftData meodel types.
  - Manages persistent storage: Automatically handles reading form and writing to disk.
  - Coordinates model contexts: Provides `ModelContext` instances used to interact with the data.
+ 
+ - Note: Add Student.self to modelContainer to run SwiftDataExample
  */
 
 import SwiftData
@@ -22,8 +24,8 @@ import SwiftUI
 struct BookwormApp: App {
     var body: some Scene {
         WindowGroup {
-            SwiftDataExample()
+            BookwormView()
         }
-        .modelContainer(for: Student.self)
+        .modelContainer(for: Book.self)
     }
 }
