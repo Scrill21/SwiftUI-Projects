@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlignmentIntro: View {
     var body: some View {
-        customAlignmentGuide
+        alignmentGuide
     }
     
     var basicAlignment: some View {
