@@ -46,6 +46,9 @@ struct OuterView: View {
     }
 }
 
+/// Use .global coordinate space to see a View's position on the entire screen
+/// Use .named (Custom) coordinate space to see a View's position relative to another view
+/// Use .local coordinate space to see the View's position in it's parent
 struct InnerView: View {
     var body: some View {
         HStack {
